@@ -182,62 +182,120 @@ a {
 }
 
 /* Responsive adjustments */
+
 @media (max-width: 768px) {
   #wrap {
-    width: 100%;
+    width: 100vw;
     height: auto;
-    padding: 0 10px;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0 2vw;
+    margin-top: 0;
   }
   #canvas {
-    width: 100%;
-    height: auto;
+    width: 100vw !important;
+    height: 60vw !important;
+    min-width: 0;
+    min-height: 200px;
+    max-width: 100vw;
+    max-height: 70vw;
     aspect-ratio: 1100 / 680;
+    display: block;
+    margin: 0 auto;
   }
   #text {
     left: 50%;
     top: auto;
     bottom: 20px;
     transform: translateX(-50%);
-    width: 92%;
+    width: 96vw;
     height: auto;
+    font-size: 4vw;
+    padding: 2vw;
   }
   #code {
-    font-size: 14px;
-    line-height: 22px;
-    margin-top: 10px;
+    font-size: 4vw;
+    line-height: 6vw;
+    margin-top: 2vw;
     text-align: center;
   }
   #clock-box {
     position: fixed;
-    left: 6px;
-    top: 6px;
+    left: 2vw;
+    top: 2vw;
+    font-size: 4vw;
+    z-index: 1000;
   }
-  #next-clock-box { right: 6px; top: 6px; }
+  #next-clock-box {
+    right: 2vw;
+    top: 2vw;
+    font-size: 4vw;
+    z-index: 1000;
+  }
   #daily-message {
     position: fixed;
     left: 50%;
     bottom: 200px;
     transform: translateX(-50%);
-    padding: 8px 12px;
+    padding: 2vw 4vw;
     z-index: 1000;
     text-align: center;
+    font-size: 4vw;
+    max-width: 96vw;
   }
   .timer-container {
-    padding: 8px 12px;
-    max-width: 240px;
+    padding: 2vw 4vw;
+    max-width: 96vw;
+    font-size: 4vw;
   }
   .timer-title {
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-size: 4vw;
+    margin-bottom: 2vw;
   }
-  .timer-grid { gap: 6px; }
-  .timer-item { min-width: 38px; }
-  .timer-number { font-size: 18px; }
-  .timer-label { font-size: 10px; }
+  .timer-grid {
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+  .timer-item {
+    min-width: 12vw;
+    font-size: 4vw;
+  }
+  .timer-number {
+    font-size: 5vw;
+  }
+  .timer-label {
+    font-size: 3vw;
+  }
 }
 
 @media (max-width: 420px) {
-  .timer-container { max-width: 200px; }
-  .timer-number { font-size: 16px; }
-  .timer-label { font-size: 9px; }
+  #wrap {
+    padding: 0 1vw;
+  }
+  #canvas {
+    height: 50vw !important;
+    min-height: 120px;
+    max-height: 60vw;
+  }
+  #text {
+    font-size: 5vw;
+    padding: 2vw;
+  }
+  #code {
+    font-size: 5vw;
+    line-height: 7vw;
+  }
+  #daily-message {
+    font-size: 5vw;
+    padding: 2vw 3vw;
+  }
+  .timer-title {
+    font-size: 5vw;
+  }
+  .timer-number {
+    font-size: 6vw;
+  }
+  .timer-label {
+    font-size: 4vw;
+  }
 }
